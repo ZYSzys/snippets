@@ -1,5 +1,7 @@
 # css snippets
 
+- [Demo](http://zyszys.top/snippets/css/docs/index.html)
+
 ### [bouncing.loader.css](bouncing.loader.css)
 
 #### Usage
@@ -21,6 +23,13 @@
 <div class="donut"></div>
 ```
 
+### [hover.underline.animation.css](hover.underline.animation.css)
+
+#### Usage
+```html
+<link rel="stylesheet" type="text/css" href="hover.underline.animation.css">
+<div class="hover-underline-animation">Hello, World!</div>
+```
 
 ### [waterfall.css](waterfall.css)
 
