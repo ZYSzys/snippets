@@ -12,6 +12,16 @@
 </div>
 ```
 
+
+### [donut.css](donut.css)
+
+#### Usage
+```html
+<link rel="stylesheet" type="text/css" href="donut.css">
+<div class="donut"></div>
+```
+
+
 ### [waterfall.css](waterfall.css)
 
 #### Usage
@@ -27,3 +37,5 @@
     </div>
 </div>
 ```
+
+
