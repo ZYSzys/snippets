@@ -31,6 +31,15 @@
 <div class="hover-underline-animation">Hello, World!</div>
 ```
 
+
+### [vertically.center.css](vertically.center.css)
+
+#### Usage
+```html
+<link rel="stylesheet" type="text/css" href="vertically.center.css">
+```
+
+
 ### [waterfall.css](waterfall.css)
 
 #### Usage

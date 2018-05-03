@@ -1,0 +1,11 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+body {
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+}
