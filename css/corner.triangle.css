@@ -1,0 +1,9 @@
+.corner-triangle {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100px;
+    width: 100px;
+    background: linear-gradient(45deg, transparent 50%, lightseagreen 0%);
+    border-top-right-radius: 10%;
+}

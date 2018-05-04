@@ -15,6 +15,15 @@
 ```
 
 
+### [corner.triangle.css](corner.triangle.css)
+
+#### Usage
+```html
+<link rel="stylesheet" type="text/css" href="corner.triangle.css">
+<div class="corner-triangle"></div>
+```
+
+
 ### [donut.css](donut.css)
 
 #### Usage
