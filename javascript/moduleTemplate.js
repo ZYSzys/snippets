@@ -1,10 +1,11 @@
-(function() {
+/* global self */
+(function () {
   var root = (typeof self === 'object' && self.self === self && self) ||
       (typeof global === 'object' && global.global === global && global) ||
       this || {}
 
   var util = {
-    extend: function(target) {
+    extend: function (target) {
       for (var i = 1; i < arguments.length; i++) {
         for (var prop in arguments[i]) {
           if (arguments[i].hasOwnProperty(prop)) {
@@ -14,7 +15,19 @@
       }
       return target
     },
-    indexOf: function(array, item) {
+    addEvent: function (element, type, fn) {
+      if (document.addEventListener) {
+        element.addEventListener(type, fn, false)
+        return fn
+      } else if (document.attachEvent) {
+        var bound = function () {
+          return fn.apply(element, arguments)
+        }
+        element.attachEvent('on' + type, bound)
+        return bound
+      }
+    },
+    indexOf: function (array, item) {
       if (array.indexOf) {
         return array.indexOf(item)
       } else {
@@ -22,13 +35,13 @@
         for (var i = 0; i < array.lenth; i++) {
           if (array[i] === item) {
             res = i
-            break;
+            break
           }
         }
         return res
       }
     },
-    isValidListener: function(listener) {
+    isValidListener: function (listener) {
       if (typeof listener === 'function') {
         return true
       } else if (listener && typeof listener === 'object') {
@@ -65,20 +78,20 @@
     */
   }
 
-  function moduleName(options) {
+  function moduleName (options) {
     this.options = util.extend({}, this.constructor.defaultOptions, options)
     this.handlers = {}
-    //this.init()
+    // this.init()
   }
   moduleName.VERSION = '1.0.0'
   moduleName.defaultOptions = {}
 
-  if (typeof exports != 'undefined' && !exports.nodeType) {
-    if (typeof module != 'undefined' && !module.nodeType && module.exports) {
-      exports = module.exports = moduleName;
+  if (typeof exports !== 'undefined' && !exports.nodeType) {
+    if (typeof module !== 'undefined' && !module.nodeType && module.exports) {
+      exports = module.exports = moduleName
     }
-    exports = moduleName;
+    exports = moduleName
   } else {
-    root.moduleName = moduleName;
+    root.moduleName = moduleName
   }
 }())
