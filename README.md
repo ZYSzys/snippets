@@ -5,7 +5,7 @@ My personal awesome snippets.
 
 - [AppleScript](applescript)
 - [C++](c++)
-- [CSS][css]
+- [CSS](css)
 - [Javascript](javascript)
 - [Python](python)
 - [Shell](shell)
