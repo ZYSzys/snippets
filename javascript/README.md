@@ -8,3 +8,6 @@
 
 简单服务器脚本
 - [server.js](server.js)
+
+移除斗鱼广告
+- [douyu.js](douyu.js)
