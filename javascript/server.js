@@ -2,7 +2,7 @@
 var http = require('http')
 
 http.createServer(function (request, response) {
-  response.writeHead(200, {'Content-Type': 'text/plain'})
+  response.writeHead(200, {'Content-Type': 'text/plain', 'Access-Control-Allow-Origin': '*'})
   response.end('Hello, ZYSzys\n')
 }).listen(3000)
 
