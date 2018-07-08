@@ -1,13 +1,7 @@
 # javascript snippets
 
-数组差异元素
-- [diffArray.js](diffArray.js)
-
-模块模板 
-- [moduleTemplate.js](moduleTemplate.js)
-
-简单服务器脚本
-- [server.js](server.js)
-
-移除斗鱼广告
-- [douyu.js](douyu.js)
+- [算法](algorithms)
+- [浏览器端](browser)
+- [js深入](deep)
+- [服务器端(nodejs)](server)
+- [Vue源码学习](vue)
