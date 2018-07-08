@@ -1,5 +1,7 @@
+/* https://github.com/youngwind/blog/issues/84 */
+
 // 观察者构造函数
-function Observer(data) {
+function Observer (data) {
   this.data = data
   this.walk(data)
 }
@@ -17,7 +19,7 @@ p.walk = function (obj) {
       val = obj[key]
 
       // 判断值，如果还是对象则继续用new Observer遍历
-      if(typeof val === 'object') {
+      if (typeof val === 'object') {
         new Observer(val)
       }
 
@@ -39,7 +41,7 @@ p.convert = function (key, val) {
     set: function (newVal) {
       console.log('setter: 访问了' + key)
       console.log('新' + key + '=' + newVal)
-      if(newVal === val) {
+      if (newVal === val) {
         return
       }
       val = newVal
