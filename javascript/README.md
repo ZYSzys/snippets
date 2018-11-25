@@ -31,3 +31,8 @@ const judge = (str) => str.split('').reverse().join('') === str
 > Object.getOwnPropertyNames(): 返回一个数组，该数组对元素是 obj 自身拥有的枚举或不可枚举属性名称字符串。
 
 > Reflect.ownKeys(): 返回一个由目标对象自身的属性键组成的数组。它的返回值等同于 **Object.getOwnPropertyNames(target).concat(Object.getOwnPropertySymbols(target))** 。
+
+> 正则表达式: 修饰符g代表全局匹配，全局匹配就是对把整个要检索的字符串全部 匹配一遍。
+原理就是 当使用了 g 修饰符，每次调用 exec()方法后，如果匹配到了字符串，则 lastIndex属性的值会改变。
+而没有使用 g 修饰符，每次调用exec()方法后，lastIndex值永远都为0 ，所以每次调用exec()最多只会检索出一个相同的字符。
+至于使用了g修饰符，找到匹配的字符串后，lastIndex的值会被重置为匹配内容的下一个字符在 需要检索字符串 中的位置索引。
