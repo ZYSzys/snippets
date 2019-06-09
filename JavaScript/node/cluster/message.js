@@ -15,6 +15,7 @@ if (cluster.isMaster) {
   function messageHandler(msg) {
     if (msg.cmd && msg.cmd === 'notifyRequest') {
       numReqs += 1;
+      console.log(process.pid)
     }
   }
 
@@ -39,5 +40,8 @@ if (cluster.isMaster) {
     // (then open another terminal window and running curl http://localhost:8000
     // to see what log in console)
     process.send({ cmd: 'notifyRequest' });
-  }).listen(8000);
+    console.log(`${process.pid} sended message.`);
+  }).listen(8000, () => {
+    console.log(`Listening on http://localhost:8000`);
+  });
 }
